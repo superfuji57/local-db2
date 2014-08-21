@@ -1,9 +1,9 @@
 library(RODBC)
 library(RMySQL)
-dsn.name <- "RPORTING"
-user.name <- "bisql05"
-pw <- "bisql05"
-con1 <- odbcConnect('rporting', uid='bisql05', pwd='bisql05')
+dsn.name <- "DSN"
+user.name <- "USN"
+pw <- "PW"
+con1 <- odbcConnect('rporting', uid=user.name, pwd=pw)
 
 table.list <- sqlTables(con1, tableType="TABLE", schema="STOR2APP")
 cat("There are", nrow(table.list), "tables in the DB2INST1 schema.\n")
